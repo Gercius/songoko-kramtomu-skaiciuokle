@@ -54,7 +54,6 @@ video {
 ::after {
   border-width: 0;
   border-style: solid;
-  border-color: theme("borderColor.DEFAULT", currentColor);
 }
 
 .google-map * {
@@ -64,6 +63,56 @@ video {
 body {
   background: rgb(162, 44, 8);
   background: linear-gradient(90deg, rgb(162, 44, 8) 0%, rgb(248, 66, 3) 50%, rgb(162, 44, 8) 100%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+  height: 70px;
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: #fcd305;
+  border: rgba(0, 0, 0, 0.65) solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+header nav {
+  height: 100%;
+}
+
+header nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+}
+
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main h1 {
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+main h1 span {
+  font-size: 3rem;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=index.css.map */
