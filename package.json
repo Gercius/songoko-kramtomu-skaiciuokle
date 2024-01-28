@@ -1,0 +1,15 @@
+{
+    "name": "songoko-kramtomu-converteris",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "css-watch": "sass --watch styles/sass:styles/css"
+    },
+    "keywords": [],
+    "author": "gercius",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.70.0"
+    }
+}
