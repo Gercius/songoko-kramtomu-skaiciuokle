@@ -45,7 +45,6 @@ object {
 
 img,
 video {
-  max-width: 100%;
   height: auto;
 }
 
@@ -70,10 +69,13 @@ body {
   height: 100%;
 }
 
+body {
+  min-width: fit-content;
+}
+
 header {
   height: 70px;
   padding: 1rem 2rem;
-  width: 100%;
   background-color: #fcd305;
   border: rgba(0, 0, 0, 0.65) solid;
   border-top: none;
@@ -160,14 +162,30 @@ main .converterWrapper button:hover {
   background-color: #fcd305;
   color: black;
 }
-main .kamehameWrapper {
-  position: relative;
-  border: black solid 2px;
-  min-height: 18.5rem;
+main .converterWrapper .converterOutput {
+  margin-top: 2rem;
 }
-main .kamehameWrapper img {
-  position: absolute;
-  bottom: 0;
+main .converterWrapper .converterOutput p {
+  font-size: 2.5rem;
+  text-align: center;
+}
+main .kamehameWrapper {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+}
+main .kamehameWrapper .gokuWrapper .position1, main .kamehameWrapper .gokuWrapper .position4, main .kamehameWrapper .gokuWrapper .position5 {
+  margin-left: 5.65rem;
+}
+main .gumWrapper {
+  display: flex;
+  margin-left: 1rem;
+}
+main .gumWrapper .gum {
+  height: 50px;
+}
+main .gumWrapper .gum:not(:first-child) {
+  margin-left: 0.25rem;
 }
 
 /*# sourceMappingURL=index.css.map */
