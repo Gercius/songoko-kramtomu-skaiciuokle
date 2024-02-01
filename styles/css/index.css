@@ -105,9 +105,12 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+main {
+  padding: 0 2rem;
+}
 main h1 {
-  margin-top: 2rem;
-  padding: 2rem;
+  padding: 2rem 0;
+  margin: 2rem -2rem 0;
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
   font-size: 3rem;
@@ -118,15 +121,16 @@ main h1 span {
 }
 main .converterWrapper {
   margin: 0 auto;
-  max-width: 200px;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 main .converterWrapper label,
 main .converterWrapper input {
   font-size: 2.5rem;
+  text-align: center;
 }
 main .converterWrapper input::-webkit-outer-spin-button,
 main .converterWrapper input::-webkit-inner-spin-button {
@@ -145,38 +149,49 @@ main .converterWrapper input {
   margin-top: 1rem;
   font-size: 2rem;
   border-radius: 5px;
-  text-align: center;
 }
 main .converterWrapper button {
   margin-top: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px;
   border-radius: 2px;
   border: none;
+  border-color: black;
   cursor: pointer;
   font-size: 2.5rem;
   background: transparent;
   color: white;
+  transition: border 0.05s ease-in-out;
 }
 main .converterWrapper button:hover {
   border: rgba(0, 0, 0, 0.6) 3px solid;
 }
 main .converterWrapper button:active {
   background-color: #fcd305;
-  color: black;
 }
-main .converterWrapper .converterOutput {
+main .converterWrapper .output {
   margin-top: 2rem;
+  padding: 0 2rem;
 }
-main .converterWrapper .converterOutput p {
-  font-size: 2.5rem;
+main .converterWrapper .output {
+  font-size: 2rem;
   text-align: center;
+}
+main .converterWrapper .output span {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+main .converterWrapper .output {
+  display: none;
 }
 main .kamehameWrapper {
   margin-top: 6rem;
   display: flex;
+  display: none;
   align-items: center;
 }
-main .kamehameWrapper .gokuWrapper .position1, main .kamehameWrapper .gokuWrapper .position4, main .kamehameWrapper .gokuWrapper .position5 {
+main .kamehameWrapper .gokuWrapper .position1,
+main .kamehameWrapper .gokuWrapper .position4,
+main .kamehameWrapper .gokuWrapper .position5 {
   margin-left: 5.65rem;
 }
 main .gumWrapper {
