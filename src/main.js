@@ -22,7 +22,7 @@ async function launchGumeHameHa(positions, animationsLength) {
 const inputElement = document.querySelector("#euros");
 const outputElement = document.querySelector(".output");
 const buttonElement = document.querySelector("button");
-const kamehameWrapper = document.querySelector(".kamehame-wrapper");
+const gumeHameWrapper = document.querySelector(".gume-hame-wrapper");
 
 buttonElement.addEventListener("click", (e) => {
     const eur = parseFloat(inputElement.value);
@@ -43,7 +43,7 @@ buttonElement.addEventListener("click", (e) => {
     setTimeout(() => {
         outputElement.style.display = "block";
         outputElement.innerHTML = `Jums išeina ${kramtomos}  <span>Son Goko</span> kramtomos.`;
-        kamehameWrapper.style.display = "flex";
+        gumeHameWrapper.style.display = "flex";
     }, 100);
 
     const gokuPositions = document.querySelectorAll(".goku-wrapper img");

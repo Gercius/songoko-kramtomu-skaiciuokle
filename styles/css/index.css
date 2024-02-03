@@ -183,22 +183,22 @@ main .converter-wrapper .output span {
 main .converter-wrapper .output {
   display: none;
 }
-main .kamehame-wrapper {
+main .gume-hame-wrapper {
   margin-top: 6rem;
   display: flex;
   align-items: center;
 }
-main .kamehame-wrapper .goku-wrapper {
+main .gume-hame-wrapper .goku-wrapper {
   height: 14.5rem;
   display: flex;
   align-items: end;
 }
-main .kamehame-wrapper .goku-wrapper .position1,
-main .kamehame-wrapper .goku-wrapper .position4,
-main .kamehame-wrapper .goku-wrapper .position5 {
+main .gume-hame-wrapper .goku-wrapper .position1,
+main .gume-hame-wrapper .goku-wrapper .position4,
+main .gume-hame-wrapper .goku-wrapper .position5 {
   margin-left: 5.65rem;
 }
-main .kamehame-wrapper .goku-wrapper img {
+main .gume-hame-wrapper .goku-wrapper img {
   display: none;
 }
 main .gum-wrapper {
