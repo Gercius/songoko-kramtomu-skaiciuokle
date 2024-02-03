@@ -185,13 +185,21 @@ main .converter-wrapper .output {
 }
 main .kamehame-wrapper {
   margin-top: 6rem;
-  display: none;
+  display: flex;
   align-items: center;
+}
+main .kamehame-wrapper .goku-wrapper {
+  height: 14.5rem;
+  display: flex;
+  align-items: end;
 }
 main .kamehame-wrapper .goku-wrapper .position1,
 main .kamehame-wrapper .goku-wrapper .position4,
 main .kamehame-wrapper .goku-wrapper .position5 {
   margin-left: 5.65rem;
+}
+main .kamehame-wrapper .goku-wrapper img {
+  display: none;
 }
 main .gum-wrapper {
   display: flex;
@@ -199,6 +207,7 @@ main .gum-wrapper {
 }
 main .gum-wrapper .gum {
   height: 50px;
+  display: none;
 }
 main .gum-wrapper .gum:not(:first-child) {
   margin-left: 0.25rem;
