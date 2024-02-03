@@ -10,7 +10,7 @@ const outputElement = document.querySelector(".output");
 const buttonElement = document.querySelector("button");
 
 buttonElement.addEventListener("click", (e) => {
-    const eur = parseInt(inputElement.value);
+    const eur = parseFloat(inputElement.value);
     outputElement.style.display = "block";
 
     if (eur > Number.MAX_SAFE_INTEGER) {
