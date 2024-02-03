@@ -119,7 +119,7 @@ main h1 span {
   font-size: 3rem;
   white-space: nowrap;
 }
-main .converterWrapper {
+main .converter-wrapper {
   margin: 0 auto;
   margin-top: 2rem;
   display: flex;
@@ -127,30 +127,30 @@ main .converterWrapper {
   align-items: center;
   justify-content: center;
 }
-main .converterWrapper label,
-main .converterWrapper input {
+main .converter-wrapper label,
+main .converter-wrapper input {
   font-size: 2.5rem;
   text-align: center;
 }
-main .converterWrapper input::-webkit-outer-spin-button,
-main .converterWrapper input::-webkit-inner-spin-button {
+main .converter-wrapper input::-webkit-outer-spin-button,
+main .converter-wrapper input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-main .converterWrapper input[type=number] {
+main .converter-wrapper input[type=number] {
   -moz-appearance: textfield;
 }
-main .converterWrapper input:focus {
+main .converter-wrapper input:focus {
   outline: 3px solid;
 }
-main .converterWrapper input {
+main .converter-wrapper input {
   width: 10rem;
   height: 4rem;
   margin-top: 1rem;
   font-size: 2rem;
   border-radius: 5px;
 }
-main .converterWrapper button {
+main .converter-wrapper button {
   margin-top: 2rem;
   padding: 10px 15px;
   border-radius: 2px;
@@ -162,46 +162,45 @@ main .converterWrapper button {
   color: white;
   transition: border 0.05s ease-in-out;
 }
-main .converterWrapper button:hover {
+main .converter-wrapper button:hover {
   border: rgba(0, 0, 0, 0.6) 3px solid;
 }
-main .converterWrapper button:active {
+main .converter-wrapper button:active {
   background-color: #fcd305;
 }
-main .converterWrapper .output {
+main .converter-wrapper .output {
   margin-top: 2rem;
   padding: 0 2rem;
 }
-main .converterWrapper .output {
+main .converter-wrapper .output {
   font-size: 2rem;
   text-align: center;
 }
-main .converterWrapper .output span {
+main .converter-wrapper .output span {
   font-size: 2rem;
   white-space: nowrap;
 }
-main .converterWrapper .output {
+main .converter-wrapper .output {
   display: none;
 }
-main .kamehameWrapper {
+main .kamehame-wrapper {
   margin-top: 6rem;
-  display: flex;
   display: none;
   align-items: center;
 }
-main .kamehameWrapper .gokuWrapper .position1,
-main .kamehameWrapper .gokuWrapper .position4,
-main .kamehameWrapper .gokuWrapper .position5 {
+main .kamehame-wrapper .goku-wrapper .position1,
+main .kamehame-wrapper .goku-wrapper .position4,
+main .kamehame-wrapper .goku-wrapper .position5 {
   margin-left: 5.65rem;
 }
-main .gumWrapper {
+main .gum-wrapper {
   display: flex;
   margin-left: 1rem;
 }
-main .gumWrapper .gum {
+main .gum-wrapper .gum {
   height: 50px;
 }
-main .gumWrapper .gum:not(:first-child) {
+main .gum-wrapper .gum:not(:first-child) {
   margin-left: 0.25rem;
 }
 
