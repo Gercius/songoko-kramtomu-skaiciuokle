@@ -11,12 +11,57 @@ function sleep(ms) {
 
 async function launchGumeHameHa(positions, animationsLength) {
     for (let i = 0; i < positions.length; i++) {
+        let sound;
+
         await sleep(animationsLength[i]);
         positions[i].style.display = "block";
-        if (i > 0) {
-            positions[i - 1].style.display = "none";
+
+        if (i > 0) positions[i - 1].style.display = "none";
+
+        if (i === 1) {
+            sound = new Audio("assets/kaio-ken.mp3");
+        } else if (i === 2) {
+            sound = new Audio("assets/ssj.mp3");
         }
+
+        if (sound) sound.play();
     }
+}
+
+async function executeAnimations(kramtomos) {
+    const gokuPositions = document.querySelectorAll(".goku-wrapper img");
+    const gokuPositionsLength = [500, 1500, 1500, 1500, 1500];
+
+    await launchGumeHameHa(gokuPositions, gokuPositionsLength);
+
+    const gumWrapper = document.querySelector(".gum-wrapper");
+    const gumElement = document.querySelector(".gum");
+    gumElement.style.display = "block";
+
+    const gumAdditionWait = 250 - kramtomos;
+    const lowestWait = 50;
+
+    let sound = new Audio("assets/gumehameha.mp3");
+    sound.loop = true;
+    sound.play();
+
+    for (let i = 0; i < kramtomos; i++) {
+        gumAdditionWait > lowestWait
+            ? await sleep(gumAdditionWait)
+            : await sleep(lowestWait);
+
+        const gum = gumElement.cloneNode(true);
+        gumWrapper.appendChild(gum);
+
+        if (i % 2 === 0) gum.style.marginTop = "-10px";
+
+        gum.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+            inline: "nearest",
+        });
+    }
+    sound.pause();
 }
 
 const inputElement = document.querySelector("#euros");
@@ -46,34 +91,5 @@ buttonElement.addEventListener("click", (e) => {
         gumeHameWrapper.style.display = "flex";
     }, 100);
 
-    const gokuPositions = document.querySelectorAll(".goku-wrapper img");
-    const gokuPositionsLength = [100, 200, 200, 200, 200];
-
-    (async function executeAnimations() {
-        await launchGumeHameHa(gokuPositions, gokuPositionsLength);
-
-        const gumWrapper = document.querySelector(".gum-wrapper");
-        const gumElement = document.querySelector(".gum");
-        gumElement.style.display = "block";
-
-        const gumAdditionWait = 250 - kramtomos;
-        const lowestWait = 50;
-        for (let i = 0; i < kramtomos; i++) {
-            gumAdditionWait > lowestWait
-                ? await sleep(gumAdditionWait)
-                : await sleep(lowestWait);
-
-            const gum = gumElement.cloneNode(true);
-            gumWrapper.appendChild(gum);
-
-            if (i % 2 === 0) {
-                gum.style.marginTop = "-10px";
-            }
-            gum.scrollIntoView({
-                behavior: "smooth",
-                block: "end",
-                inline: "nearest",
-            });
-        }
-    })();
+    executeAnimations(kramtomos);
 });
