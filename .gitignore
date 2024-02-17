@@ -1,4 +1,6 @@
 node_modules
 styles/sass
+media
+.vscode
 
 todo.txt
