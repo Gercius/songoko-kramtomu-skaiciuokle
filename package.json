@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "css-watch": "sass --watch styles/sass:styles/css"
+        "css": "sass --watch styles/sass:styles/css"
     },
     "keywords": [],
     "author": "gercius",
