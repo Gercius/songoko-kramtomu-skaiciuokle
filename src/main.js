@@ -3,7 +3,15 @@ const outputElement = document.querySelector(".output");
 const buttonElement = document.querySelector("button");
 const gumeHameWrapper = document.querySelector(".gume-hame-wrapper");
 
-buttonElement.addEventListener("click", (e) => {
+buttonElement.addEventListener("click", main);
+
+inputElement.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        main();
+    }
+});
+
+function main() {
     const eur = parseFloat(inputElement.value);
     outputElement.style.display = "block";
 
@@ -26,7 +34,7 @@ buttonElement.addEventListener("click", (e) => {
     }, 100);
 
     executeAnimations(kramtomos);
-});
+}
 
 function convertEurToKramtomos(eur) {
     const songokoKramtomaPrice = 0.03969;
