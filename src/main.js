@@ -34,6 +34,8 @@ function convertEurToKramtomos(eur) {
 }
 
 async function executeAnimations(kramtomos) {
+    const header = document.querySelector("h1");
+    header.style.display = "none";
     await playGumeHameHa();
 
     const gumWrapper = document.querySelector(".gum-wrapper");
