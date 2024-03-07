@@ -59,7 +59,6 @@ async function executeAnimations(kramtomos) {
         if (i % 2 === 0) gum.style.marginTop = "-10px";
 
         gum.scrollIntoView({
-            behavior: "smooth",
             block: "end",
             inline: "nearest",
         });
