@@ -29,8 +29,10 @@ function main() {
 
     setTimeout(() => {
         outputElement.style.display = "block";
-        outputElement.innerHTML = `Jums išeina ${kramtomos} <span>Son Goko</span> kramtomos`;
         gumeHameWrapper.style.display = "flex";
+
+        const kramtomosEnding = getKramtomosEnding(kramtomos);
+        outputElement.innerHTML = `Jums išeina ${kramtomos} <span>Son Goko</span> ${kramtomosEnding}`;
     }, 100);
 
     executeAnimations(kramtomos);
@@ -39,6 +41,25 @@ function main() {
 function convertEurToKramtomos(eur) {
     const songokoKramtomaPrice = 0.03969;
     return Math.round(eur / songokoKramtomaPrice);
+}
+
+function getKramtomosEnding(kramtomos) {
+    const lastDigit = kramtomos % 10;
+    const lastTwoDigits = kramtomos % 100;
+    let word = "";
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+        word = "kramtomų";
+    } else if (lastDigit === 1) {
+        word = "kramtoma";
+    } else if (lastDigit >= 2 && lastDigit <= 9) {
+        word = "kramtomos";
+    } else {
+        word = "kramtomų";
+    }
+
+    console.log(kramtomos, word);
+    return word;
 }
 
 async function executeAnimations(kramtomos) {
@@ -82,6 +103,7 @@ async function executeAnimations(kramtomos) {
 async function initiateGumeHameHa() {
     const positions = document.querySelectorAll(".goku-wrapper img");
     const positionsAnimationLength = [500, 1500, 1500, 1500, 3900];
+    // const positionsAnimationLength = [500, 500, 500, 500, 500];
     const soundFiles = [
         "",
         "assets/kaio-ken.mp3",
