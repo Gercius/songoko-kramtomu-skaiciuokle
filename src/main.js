@@ -44,7 +44,8 @@ function convertEurToKramtomos(eur) {
 async function executeAnimations(kramtomos) {
     const header = document.querySelector("h1");
     header.style.display = "none";
-    await playGumeHameHa();
+
+    await initiateGumeHameHa();
 
     const gumWrapper = document.querySelector(".gum-wrapper");
     const gumElement = document.querySelector(".gum");
@@ -68,6 +69,8 @@ async function executeAnimations(kramtomos) {
 
         if (i % 2 === 0) gum.style.marginTop = "-10px";
 
+        removeExcessGums(gumWrapper);
+
         gum.scrollIntoView({
             block: "end",
             inline: "nearest",
@@ -76,7 +79,7 @@ async function executeAnimations(kramtomos) {
     sound.pause();
 }
 
-async function playGumeHameHa() {
+async function initiateGumeHameHa() {
     const positions = document.querySelectorAll(".goku-wrapper img");
     const positionsAnimationLength = [500, 1500, 1500, 1500, 3900];
     const soundFiles = [
@@ -96,6 +99,20 @@ async function playGumeHameHa() {
             const sound = new Audio(soundFiles[i]);
             sound.play();
         }
+    }
+}
+
+function removeExcessGums(gumWrapper) {
+    const screenWidth = window.innerWidth;
+    let totalWidth = 0;
+    const gums = Array.from(gumWrapper.children);
+
+    gums.forEach((gum) => {
+        totalWidth += gum.offsetWidth;
+    });
+
+    if (totalWidth > 3 * screenWidth && gums.length > 0) {
+        gumWrapper.removeChild(gums[0]);
     }
 }
 
