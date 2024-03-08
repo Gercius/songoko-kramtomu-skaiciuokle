@@ -18,8 +18,8 @@ function main() {
     if (eur > Number.MAX_SAFE_INTEGER) {
         outputElement.innerHTML = "Prašome įvesti mažesnį skaičių";
         return;
-    } else if (eur < 0.03969) {
-        outputElement.innerHTML = `Prašome įvesti didesnį skaičių.<br>min. 0.03969<br>(1 kramtoma)`;
+    } else if (eur < 1) {
+        outputElement.innerHTML = `Prašome įvesti didesnį skaičių.<br>min. 1<br>(25 kramtomos)`;
         return;
     }
 
@@ -59,7 +59,7 @@ async function executeAnimations(kramtomos) {
     sound.loop = true;
     sound.play();
 
-    for (let i = 0; i < kramtomos; i++) {
+    for (let i = 0; i < kramtomos - 1; i++) {
         gumAdditionWait > lowestWait
             ? await sleep(gumAdditionWait)
             : await sleep(lowestWait);
