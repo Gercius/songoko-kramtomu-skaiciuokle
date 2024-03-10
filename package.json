@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "css": "sass --watch styles/sass:styles/css"
+        "css": "sass --watch styles/sass:styles/css",
+        "dev": "npm run css"
     },
     "keywords": [],
     "author": "gercius",
