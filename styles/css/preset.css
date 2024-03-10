@@ -59,9 +59,4 @@ video {
   border-style: none;
 }
 
-body {
-  background: rgb(162, 44, 8);
-  background: linear-gradient(90deg, rgb(162, 44, 8) 0%, rgb(248, 66, 3) 50%, rgb(162, 44, 8) 100%);
-}
-
 /*# sourceMappingURL=preset.css.map */
