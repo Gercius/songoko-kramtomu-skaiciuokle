@@ -1,19 +1,19 @@
 :root {
-    font-size: 10px;
-    font-family: sans-serif;
-    color: whitesmoke;
-    background-color: gray;
+  font-size: 10px;
+  font-family: sans-serif;
+  color: whitesmoke;
+  background-color: gray;
 }
 
 * {
-    font-size: 2rem;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-size: 2rem;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 input {
-    color: black;
+  color: black;
 }
 
 h1,
@@ -22,13 +22,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: inherit;
-    font-weight: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img,
@@ -39,176 +39,171 @@ audio,
 iframe,
 embed,
 object {
-    display: block;
-    vertical-align: middle;
+  display: block;
+  vertical-align: middle;
 }
 
 img,
 video {
-    height: auto;
+  height: auto;
 }
 
 *,
 ::before,
 ::after {
-    border-width: 0;
-    border-style: solid;
+  border-width: 0;
+  border-style: solid;
 }
 
 .google-map * {
-    border-style: none;
+  border-style: none;
 }
 
 html,
 body {
-    height: 100%;
-    min-width: fit-content;
-    max-height: 100vh;
-    background: rgb(162, 44, 8);
-    background: linear-gradient(
-        90deg,
-        rgb(162, 44, 8) 0%,
-        rgb(248, 66, 3) 50%,
-        rgb(162, 44, 8) 100%
-    );
+  height: 100%;
+  min-width: fit-content;
+  max-height: 100vh;
+  background: rgb(162, 44, 8);
+  background: linear-gradient(90deg, rgb(162, 44, 8) 0%, rgb(248, 66, 3) 50%, rgb(162, 44, 8) 100%);
 }
 
 header {
-    height: 70px;
-    padding: 0 2rem;
-    background-color: #fcd305;
-    border: rgba(0, 0, 0, 0.65) solid;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+  height: 70px;
+  padding: 0 2rem;
+  background-color: #fcd305;
+  border: rgba(0, 0, 0, 0.65) solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 header nav {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header nav img {
-    box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.75);
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
 }
 header nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 2.5rem;
 }
 header nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 main {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 main h1 {
-    padding: 2rem 0;
-    margin: 2rem -2rem 0;
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    font-size: 3rem;
+  padding: 2rem 0;
+  margin: 2rem -2rem 0;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 3rem;
 }
 main h1 span {
-    font-size: 3rem;
-    white-space: nowrap;
+  font-size: 3rem;
+  white-space: nowrap;
 }
 main .converter-wrapper {
-    margin: 0 auto;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 main .converter-wrapper label,
 main .converter-wrapper input {
-    font-size: 2.5rem;
-    text-align: center;
+  font-size: 2.5rem;
+  text-align: center;
 }
 main .converter-wrapper input::-webkit-outer-spin-button,
 main .converter-wrapper input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
-main .converter-wrapper input[type="number"] {
-    -moz-appearance: textfield;
+main .converter-wrapper input[type=number] {
+  -moz-appearance: textfield;
 }
 main .converter-wrapper input:focus {
-    outline: 3px solid;
+  outline: 3px solid;
 }
 main .converter-wrapper input {
-    width: 10rem;
-    height: 4rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    border-radius: 5px;
+  width: 10rem;
+  height: 4rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
 }
 main .converter-wrapper button {
-    margin-top: 2rem;
-    padding: 10px 15px;
-    border-radius: 2px;
-    border: none;
-    border-color: black;
-    cursor: pointer;
-    font-size: 2.5rem;
-    background: transparent;
-    color: white;
-    transition: border 0.05s ease-in-out;
+  margin-top: 2rem;
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: none;
+  border-color: black;
+  cursor: pointer;
+  font-size: 2.5rem;
+  background: transparent;
+  color: white;
+  transition: border 0.05s ease-in-out;
 }
 main .converter-wrapper button:hover {
-    border: rgba(0, 0, 0, 0.6) 3px solid;
+  border: rgba(0, 0, 0, 0.6) 3px solid;
 }
 main .converter-wrapper button:active {
-    background-color: #fcd305;
+  background-color: #fcd305;
 }
 main .converter-wrapper .output {
-    margin-top: 2rem;
-    padding: 0 2rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
 }
 main .converter-wrapper .output {
-    font-size: 2rem;
-    text-align: center;
+  font-size: 2rem;
+  text-align: center;
 }
 main .converter-wrapper .output span {
-    font-size: 2rem;
-    white-space: nowrap;
+  font-size: 2rem;
+  white-space: nowrap;
 }
 main .converter-wrapper .output {
-    display: none;
+  display: none;
 }
 main .gume-hame-wrapper {
-    margin-top: 6rem;
-    display: flex;
-    align-items: center;
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
 }
 main .gume-hame-wrapper .goku-wrapper {
-    height: 14.5rem;
-    display: flex;
-    align-items: end;
+  height: 14.5rem;
+  display: flex;
+  align-items: end;
 }
 main .gume-hame-wrapper .goku-wrapper .position1,
 main .gume-hame-wrapper .goku-wrapper .position4,
 main .gume-hame-wrapper .goku-wrapper .position5 {
-    margin-left: 5.65rem;
+  margin-left: 5.65rem;
 }
 main .gume-hame-wrapper .goku-wrapper img {
-    display: none;
+  display: none;
 }
 main .gum-wrapper {
-    display: flex;
-    margin-left: 1rem;
+  display: flex;
+  margin-left: 1rem;
 }
 main .gum-wrapper .gum {
-    height: 50px;
-    display: none;
+  height: 50px;
+  display: none;
 }
 main .gum-wrapper .gum:not(:first-child) {
-    margin-left: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 /*# sourceMappingURL=index.css.map */
