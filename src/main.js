@@ -1,3 +1,5 @@
+import { audio } from "./audio.js";
+
 const inputElement = document.querySelector("#euros");
 const outputElement = document.querySelector(".output");
 const buttonElement = document.querySelector("button");
@@ -76,9 +78,8 @@ async function executeAnimations(kramtomos) {
     const gumAdditionWait = 250 - kramtomos;
     const lowestWait = 50;
 
-    let sound = new Audio("assets/gumehameha.mp3");
-    sound.loop = true;
-    sound.play();
+    audio.gumehameha.loop = true;
+    audio.gumehameha.play();
 
     for (let i = 0; i < kramtomos - 1; i++) {
         gumAdditionWait > lowestWait
@@ -103,23 +104,15 @@ async function executeAnimations(kramtomos) {
 async function initiateGumeHameHa() {
     const positions = document.querySelectorAll(".goku-wrapper img");
     const positionsAnimationLength = [500, 1500, 1500, 1500, 3900];
-    // const positionsAnimationLength = [500, 500, 500, 500, 500];
-    const soundFiles = [
-        "",
-        "assets/kaio-ken.mp3",
-        "assets/ssj.mp3",
-        "assets/kamehame.mp3",
-        "assets/ha-long.mp3",
-    ];
+    const sounds = ["gumehameha", "kaioKen", "SSJ", "kamehameha", "haLong"];
 
     for (let i = 0; i < positions.length; i++) {
         await sleep(positionsAnimationLength[i]);
         positions[i].style.display = "block";
-        if (i > 0) positions[i - 1].style.display = "none";
 
-        if (soundFiles[i]) {
-            const sound = new Audio(soundFiles[i]);
-            sound.play();
+        if (i > 0) {
+            positions[i - 1].style.display = "none";
+            audio[sounds[i]].play();
         }
     }
 }
