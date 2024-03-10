@@ -98,7 +98,7 @@ async function executeAnimations(kramtomos) {
             inline: "nearest",
         });
     }
-    sound.pause();
+    audio.gumehameha.pause();
 }
 
 async function initiateGumeHameHa() {
