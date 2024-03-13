@@ -3,14 +3,12 @@ import { audio } from "./audio.js";
 const inputElement = document.querySelector("#euros");
 const outputElement = document.querySelector(".output");
 const buttonElement = document.querySelector("button");
-const gumeHameWrapper = document.querySelector(".gume-hame-wrapper");
+const gumehameWrapper = document.querySelector(".gumehame-wrapper");
 
 buttonElement.addEventListener("click", main);
 
 inputElement.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-        main();
-    }
+    if (e.key === "Enter") main();
 });
 
 function main() {
@@ -31,21 +29,21 @@ function main() {
 
     setTimeout(() => {
         outputElement.style.display = "block";
-        gumeHameWrapper.style.display = "flex";
+        gumehameWrapper.style.display = "flex";
 
-        const kramtomosEnding = getKramtomosEnding(kramtomos);
+        const kramtomosEnding = getKramtomosWordEnding(kramtomos);
         outputElement.innerHTML = `Jums išeina ${kramtomos} <span>Son Goko</span> ${kramtomosEnding}`;
     }, 100);
 
     executeAnimations(kramtomos);
 }
 
-function convertEurToKramtomos(eur) {
+const convertEurToKramtomos = (eur) => {
     const songokoKramtomaPrice = 0.03969;
     return Math.round(eur / songokoKramtomaPrice);
-}
+};
 
-function getKramtomosEnding(kramtomos) {
+function getKramtomosWordEnding(kramtomos) {
     const lastDigit = kramtomos % 10;
     const lastTwoDigits = kramtomos % 100;
     let word = "";
@@ -60,7 +58,6 @@ function getKramtomosEnding(kramtomos) {
         word = "kramtomų";
     }
 
-    console.log(kramtomos, word);
     return word;
 }
 
@@ -68,7 +65,7 @@ async function executeAnimations(kramtomos) {
     const header = document.querySelector("h1");
     header.style.display = "none";
 
-    await initiateGumeHameHa();
+    await initiateGumehameha();
 
     const gumWrapper = document.querySelector(".gum-wrapper");
     const gumElement = document.querySelector(".gum");
@@ -91,7 +88,7 @@ async function executeAnimations(kramtomos) {
 
         if (i % 2 === 0) gum.style.marginTop = "-10px";
 
-        removeExcessGums(gumWrapper);
+        removeExcessGum(gumWrapper);
 
         gum.scrollIntoView({
             block: "end",
@@ -101,7 +98,7 @@ async function executeAnimations(kramtomos) {
     audio.gumehameha.pause();
 }
 
-async function initiateGumeHameHa() {
+async function initiateGumehameha() {
     const positions = document.querySelectorAll(".goku-wrapper img");
     const positionsAnimationLength = [500, 1500, 1500, 1500, 3900];
     const sounds = ["gumehameha", "kaioKen", "SSJ", "kamehameha", "haLong"];
@@ -117,7 +114,7 @@ async function initiateGumeHameHa() {
     }
 }
 
-function removeExcessGums(gumWrapper) {
+function removeExcessGum(gumWrapper) {
     const screenWidth = window.innerWidth;
     let totalWidth = 0;
     const gums = Array.from(gumWrapper.children);

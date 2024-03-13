@@ -176,22 +176,22 @@ main .converter-wrapper .output span {
 main .converter-wrapper .output {
   display: none;
 }
-main .gume-hame-wrapper {
+main .gumehame-wrapper {
   margin-top: 6rem;
   display: flex;
   align-items: center;
 }
-main .gume-hame-wrapper .goku-wrapper {
+main .gumehame-wrapper .goku-wrapper {
   height: 14.5rem;
   display: flex;
   align-items: end;
 }
-main .gume-hame-wrapper .goku-wrapper .position1,
-main .gume-hame-wrapper .goku-wrapper .position4,
-main .gume-hame-wrapper .goku-wrapper .position5 {
+main .gumehame-wrapper .goku-wrapper .position1,
+main .gumehame-wrapper .goku-wrapper .position4,
+main .gumehame-wrapper .goku-wrapper .position5 {
   margin-left: 5.65rem;
 }
-main .gume-hame-wrapper .goku-wrapper img {
+main .gumehame-wrapper .goku-wrapper img {
   display: none;
 }
 main .gum-wrapper {
